@@ -12,7 +12,7 @@ export async function POST(req) {
     const seed = Math.floor(Math.random() * 1000000);
 
     // Pollinations free image generation - no API key needed
-    const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=${width}&height=${height}&seed=${seed}&nologo=true`;
+    const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=${width}&height=${height}&seed=${seed}&nologo=true&model=flux`;
 
     return Response.json({ imageUrl, prompt });
   } catch (error) {
